@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavitha Engineering College</title>
+
+    <!-- Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <style>
+        .header{
+           display: flex;
+           background-color: #900D09;
+           padding: 10px;
+           color: white;
+        }
+        .icons{
+            display: flex;
+            flex: 50%;
+            justify-content: center;
+            padding-left: 10px;
+            padding-right: 10px;
+            color:lightcyan;
+        }
+        .icons>i{
+            padding-left: 10px;
+        }
+        .options{
+            display: flex;
+            flex: 100%;
+            justify-content: space-around;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 100;
+            font-size: 13px;
+        }
+        .options>span{
+           padding-left: 5px;
+        }
+        .content-wrap{
+            display: flex;
+        }
+        .search{
+            display: flex;
+            flex: 100%;
+            justify-content: space-evenly;
+            margin-top:25px;
+            margin-bottom: 75px;
+        }
+        .search>button{
+            border:none;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 3px;
+            background:transparent;
+        }
+        .heading1{
+            text-align: center;
+            font-size: 45px;
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-shadow:5px 1px black;
+            font-weight: bolder;
+        }
+        .heading2{
+            text-align: center;
+            font-size: 25px;
+            color: white;
+            text-shadow:3px 1px black;
+            font-weight: bolder;
+            margin: 0;
+            padding: 0;
+        }
+        .interact-buttons{
+            display: flex;
+            flex: 100%;
+            justify-content: center;  
+        }
+        .interact-buttons>button{
+            padding: 20px;
+            border: 1px solid black;
+            margin : 15px;
+            color:black;
+            background-color: whitesmoke
+        }
+        .features{
+            display: flex;
+            flex: 100%;
+            justify-content: space-evenly;
+            color: whitesmoke;
+            padding-top: 10px;
+        }
+        .features>*>i{
+            font-size: 40px;
+        }
+        .features>div{
+            width: 150px;
+            text-align: center;
+        }
+        .features>div>p{
+           font-weight: bolder;
+           font-family: Verdana, Geneva, Tahoma, sans-serif;
+           text-shadow:2px 1px black;
+        }
+        .main-content{
+            background-image: url('./images/college.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .sub-content{
+            display: flex;
+        }
+        .definition{
+            flex:50%;
+            padding: 20px;
+            background-color: #B1D4E0;
+        }
+        .definition>p{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .images{
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .images>img{
+            width: 24%;
+            border: 1px solid royalblue;
+            border-radius: 5px;
+        }
+        .records{
+            flex:50%;
+            justify-content: space-between;
+            padding-top: 30px;
+            background-color: #D4F1F4;
+            padding-left: 30px;
+        }
+        .records>span{
+            font-size: 20px;
+        }
+        .footer{
+            display: flex;
+            justify-content: space-around;
+            background-color: #900D09;
+            padding: 20px;
+        }
+        .footer>*>p{
+            color: gold;
+            padding: 5px;
+            font-size: 21px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+        .footer>*>li{
+           list-style: none;
+           color: wheat;
+           padding: 5px;
+           font-family: 'Times New Roman', Times, serif;
+        }
+        .reputation{
+            display: flex;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: lightslategrey;
+            background-color: lightgray;
+            padding: 10px;
+        }
+        .reputation1, .reputation2, .reputation3{
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .reputation>*>*>i{
+            font-size: 63px;
+            padding: 10px;
+        }
+        .reputation>*>*>span{
+            font-size: 27px;
+            text-align: center;
+            width: 60%;
+            padding: 5px;
+            padding-top: 10px;
+        }
+        .reputation>div{
+            flex:30%;
+        }
+        .facilities{
+            display: flex;
+            justify-content: space-around;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 900;
+        }
+        .facilities>div{
+            width: 100px;
+            margin: 10px;
+            padding: 99px 50px;
+            text-align: center;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+            color: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .laboratory:hover{
+            width: 120px;
+            height: 0px;
+            border: 10px solid royalblue;
+        }
+        .sports:hover{
+            width: 120px;
+            height: 0px;
+            border: 10px solid green;
+        }
+        .library:hover{
+            width: 120px;
+            height: 0px;
+            border: 10px solid lightcoral;
+        }
+        .transport:hover{
+            width: 100px;
+            height: 0px;
+            border: 10px solid goldenrod;
+        }
+        .hostel:hover{
+            width: 120px;
+            height: 0px;
+            border: 10px solid darkred;
+        }
+        .laboratory{
+            background-image: url('./images/laboratory.jpg');
+        }
+        .library{
+            background-image: url('./images/library.jpg');
+        }
+        .sports{
+            background-image: url('./images/sports.jpg');
+        }
+        .hostel{
+            background-image: url('./images/hostel.jpg');
+        }
+        .transport{
+            background-image: url('./images/transport.jpg');
+        }
+        .placement>h1{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width: 300px;
+            margin: auto;
+            padding: 25px;
+            border-bottom: 2px solid black;
+            text-align: center;   
+        }
+        .company{
+            text-align: center;
+            display: none;
+        }
+        .company>img{
+            width: 75%;
+            margin: auto;
+        }
+        .buttons{
+            text-align: center;
+        }
+        .buttons>button{
+            border: none;
+            background-color: white;
+            font-size: 20px;
+            padding: 10px 30px;
+            margin: 5px;
+        }
+        .buttons>button:hover{
+            border: 1px solid royalblue;
+            border-radius: 20px;
+        }
+        .labs1,.labs2{
+            display: flex;
+        }
+        .labs1>div, .labs2>div{
+            display: flex;
+            flex: 25%;
+            text-align: justify;
+            font-weight: 200;
+        }
+        .labs1>div>img, .labs2>div>img{
+            width: 120%;
+            object-fit:cover;
+        }
+        .labs1>div>p, .labs2>div>p{
+           margin: auto;
+           padding: 12px 9px;
+           line-height: 25px;
+        }
+        .labs>h1{
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 5px;
+        }
+        .labs>h1>strong{
+            color: blue;
+        }
+        .labs1>div{
+            background-color: royalblue;
+            color: white;
+        }
+        .labs2>div{
+            background-color: gold;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="header">
+        <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+        <div class="options">
+            <span>ALUMNI</span>
+            <span>OLD WEBSITE</span>
+            <span>CAREERS</span>
+            <span>NIRF</span>
+            <span>IQAC</span>
+            <span>MANDATORY DISCLOSURE</span>
+            <span>CONTACT US</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="content-wrap">
+            <div class="search">
+                <button>About</button>
+                <button>Departments</button>
+                <button>Admission</button>
+                <button>Students</button>
+                <button>Academics</button>
+                <button>Research</button>
+                <button>Placement</button>
+            </div>
+        </div>
+        <marquee width="100%" behavior="slide" >
+        <h1 class="heading1">Inspiring You Towards Excellence</h1>
+        <h5 class="heading2">KEC, is a place for Learning, Discovery, Innovation, Expression & Discourse</h5>
+        </marquee>
+        <br><br>
+        <div class="interact-buttons">
+            <button>APPLY NOW</button>
+            <button>LEARN MORE</button>
+        </div>
+        <br><br><br><br><br>
+        <div class="features">
+            <div class="events">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <p>Events</p>
+            </div>
+            <div class="course">
+                <i class="fa-solid fa-certificate"></i>
+                <p>Course</p>
+            </div>
+            <div class="placements">
+                <i class="fa-solid fa-building"></i>
+                <p>Placements</p>
+            </div>
+            <div class="campus">
+                <i class="fa-solid fa-building-columns"></i>
+                <p>Campus</p>
+            </div>
+            <div class="research">
+                <i class="fa-solid fa-book"></i>
+                <p>Research</p>
+            </div>
+            <div class="fee">
+                <i class="fa-solid fa-cash-register"></i>
+                <p>Fee Payment</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="images">
+        <img src="./images/nirf.jpg" alt="" srcset="">
+        <img src="./images/nba.jpg" alt="" srcset="">
+        <img src="./images/naac.jpg" alt="" srcset="">
+        <img src="./images/aaaa.jpg" alt="" srcset="">
+    </div>
+
+    <div class="events">
+
+    </div>
+
+    <div class="sub-content">
+        <div class="definition">
+            <h1>Why Choose <br> Kavitha Engineering College ?</h1>
+            <p>Kavitha Engineering College was instituted in  the academic year 1996 – 1997, with the Approval of Government of Tamil Nadu and AICTE, New Delhi. </p>
+        </div>
+        <div class="records">
+            <span> <strong style="font-size: 50px;">27+</strong>&nbsp;&nbsp; Years in Education&nbsp;&nbsp;&nbsp;</span>
+            <span> <strong style="font-size: 50px;">11+</strong>&nbsp;&nbsp; UG Programmes</span>  <br><br>
+            <span> <strong style="font-size: 50px;">98%</strong>&nbsp;&nbsp; Placement Records&nbsp;&nbsp;&nbsp;</span>
+            <span> <strong style="font-size: 50px;">6+</strong>&nbsp;&nbsp; PG Programmes</span>  
+        </div>
+    </div>
+
+    <div class="reputation">
+        <div>
+            <div class="reputation1">
+                <i class="fa-solid fa-user-graduate"></i>
+                <span>15 <br> Centers of Excellence </span> <br>
+            </div>
+        </div>
+        <div>
+            <div class="reputation2">
+                 <i class="fa-solid fa-user-graduate"></i>
+                 <span>91 <br> MOUs with Reputed Industries </span> <br>
+            </div>
+        </div>
+        <div>
+            <div class="reputation3">
+                <i class="fa-solid fa-user-graduate"></i>
+                <span>1889 <br> Publications </span> <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="facilities">
+        <div class="laboratory">Laboratories</div>
+        <div class="library">Library</div>
+        <div class="hostel">Hostel</div>
+        <div class="transport">Transport</div>
+        <div class="sports">Sports</div>
+    </div>
+
+    <div class="placement">
+        <h1>Top Recruiters</h1>
+        <div class="company">
+            <img src="./images/placements1.png" alt="">
+        </div>
+        <div class="company">
+            <img src="./images/placements2.png" alt="">
+        </div>
+        <div class="company">
+            <img src="./images/placements3.png" alt="">
+        </div>
+        <div class="company">
+            <img src="./images/placements4.png" alt="">
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="moveBackward(1)"> <i class="fa-solid fa-chevron-left"></i> </button>
+        <button onclick="moveForward(1)"> <i class="fa-solid fa-chevron-right"></i> </button>
+    </div>
+
+    <div class="labs">
+        <h1>Incubation <strong>LABS</strong> </h1>
+        <div class="labs1">
+            <div> <img src="./images/ai.jpg" alt="" srcset=""> </div>
+            <div> <p> Artificial Intelligence is a branch of computer science that aims to imbue software with the ability to analyze its environment using predetermined rules. </p> </div>
+            <div> <img src="./images/ds.jpg" alt="" srcset=""> </div>
+            <div> <p> From business and finance or health and medicine, to infrastructure or education, data science plays a vital role in all aspects of the modern world </p> </div>
+        </div>
+        <div class="labs2">
+            <div> <p> A fully managed service that removes that heavy lifting in the ML process. Develop High Quality ML Models Faster with less effort and lower cost. </p> </div>
+            <div> <img src="./images/ml.jpg" alt="" srcset="">  </div>
+            <div> <p> AutoCAD is a computer aided design (CAD) program used for 2-D and 3-D design and drafting. AutoCAD is developed and marketed by Autodesk Inc </p> </div>
+            <div> <img src="./images/autocad.jpg" alt="" srcset="">  </div>
+        </div>
+    </div>
+    <br>
+    
+    <div class="footer">
+        <div class="footer-profile">
+            <p>Profile</p>
+            <hr>
+            <li>About College</li>
+            <li>Accreditations</li>
+            <li>Certifications</li>
+            <li>Governing Council</li>
+            <li>Development Council</li>
+            <li>About College</li>
+            <li>MoU</li>
+            <li>Eminent Faculty</li>
+        </div>
+        <div class="footer-academics">
+            <p>Academic</p>
+            <hr>
+            <li>Departments</li>
+            <li>Admissions</li>
+            <li>Facilities</li>
+            <li>Student Life</li>
+            <li>Research</li>
+            <li>Alumni</li>
+            <li>Curriculum Feedback</li>
+        </div>
+        <div class="footer-links">
+            <p>Important Links</p>
+            <hr>
+            <li>AntiRagging</li>
+            <li>ARIIA Data Submission</li>
+            <li>ARIIA Validation</li>
+            <li>NIRF</li>
+            <li>NAAC-SSR</li>
+            <li>KEC Transport</li>
+            <li>HR Manual</li>
+            <li>Grievance Portal</li>
+            <li>Privacy Policy</li>
+        </div>
+        <div class="footer-contact">
+            <p>Contact Us</p>
+            <hr>
+            <li>Kavitha Engineering College,</li>
+            <li>Kavitha Nagar Thandalam,</li>
+            <li>Chennai - 602 105.</li>
+            <li>Phone : +91-44-67182222, 67109999</li>
+        </div>
+    </div>
+</body>
+
+<script>
+var slidePosition = 1;
+SlideShow(slidePosition);
+function moveForward(n) {
+  SlideShow(slidePosition += n);
+}
+function moveBackward(n) {
+  SlideShow(slidePosition -= n);
+}
+function SlideShow(n) {
+  var i;
+  var slides = document.getElementsByClassName("company");
+  if (n > slides.length) {slidePosition = 1}
+  if (n < 1) {slidePosition = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slidePosition-1].style.display = "block";
+} 
+</script>
+
+</html>
